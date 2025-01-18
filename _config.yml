@@ -1,1 +1,55 @@
-theme: jekyll-theme-hacker
+# Theme Settings
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "dark"
+
+# Site Settings
+locale: "ko-KR"
+title: "수학 전공자의 개발 이야기"
+title_separator: "-"
+subtitle: "Development Story of Mathematician"
+name: "김기덕"
+description: "병렬 프로그래밍 개발자의 기술 블로그"
+url: "https://gideokkim.github.io"
+baseurl: ""
+repository: "GideokKim/GideokKim.github.io"
+search: true
+search_full_content: true
+
+# Site Author
+author:
+  name: "김기덕"
+  avatar: # 프로필 이미지 URL을 추가하세요
+  bio: "2년 차 병렬 프로그래밍 개발자"
+  location: "South Korea"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/GideokKim"
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      show_date: true
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5
+paginate_path: /page:num/
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache

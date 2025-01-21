@@ -10,5 +10,7 @@ sidebar_main: true
 
 ***
 
-{% assign posts = site.categories.Algorithm %}
-{% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
+{% assign posts = site.categories['Algorithm Theory'] | sort:"date" | reverse %}
+{% for post in posts %}
+  {% include archive-single.html %}
+{% endfor %}

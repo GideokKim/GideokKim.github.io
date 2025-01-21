@@ -18,7 +18,7 @@ search_full_content: true
 # Site Author
 author:
   name: "감자"
-  avatar: # 프로필 이미지 URL을 추가하세요
+  avatar: https://github.com/user-attachments/assets/ee788ff0-5dc1-4406-9cd2-a860c33d9582
   bio: "병렬 프로그래밍 개발자"
   location: "South Korea"
   links:

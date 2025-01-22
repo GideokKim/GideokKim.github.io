@@ -1,5 +1,5 @@
 ---
-title: "파이썬 코딩 테스트용 기본 입출력"
+title: "[Python][백준 0] 코딩 테스트용 기본 입출력"
 categories:
   - Python Coding Test
 tags:

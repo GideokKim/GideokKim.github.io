@@ -24,6 +24,15 @@
                 {% endfor %}
             </ul>
 
+        <span class="nav__sub-title">Cloud</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Cloud Computing Theory" %}
+                        <li><a href="/categories/cloud-computing-theory" class="">Cloud Computing Theory ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
         <span class="nav__sub-title">Algorithm</span>
             <ul>
                 {% for category in site.categories %}

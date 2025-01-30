@@ -367,3 +367,8 @@ input[type="submit"],
   -webkit-transition: $global-transition;
   transition: $global-transition;
 }
+
+strong {
+  color: #2196F3;  // 원하는 색상 코드
+  font-weight: bold;
+}

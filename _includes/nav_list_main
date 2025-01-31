@@ -98,6 +98,13 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "Web Development" %}
+                        <li><a href="/categories/web-development" class="">Web Development ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "Dev Culture" %}
                         <li><a href="/categories/dev-culture" class="">Dev Culture ({{category[1].size}})</a></li>
                     {% endif %}

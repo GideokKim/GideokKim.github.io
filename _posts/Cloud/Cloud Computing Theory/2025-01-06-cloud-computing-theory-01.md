@@ -1,6 +1,7 @@
 ---
 title: "☁️ 클라우드 컴퓨팅 핵심 이론: 가상화 기술부터 발전 역사까지"
 date: 2025-01-06 09:00:00 +0900
+last_modified_at: 2025-01-30
 categories:
   - Cloud Computing Theory
 tags:
@@ -12,6 +13,9 @@ tags:
   - cloud infrastructure
   - cloud security
   - cloud history
+  
+toc: true
+toc_sticky: true
 ---
 
 # ☁️ Cloud Computing이란?

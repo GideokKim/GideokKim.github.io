@@ -1,5 +1,7 @@
 ---
 title: "[수학] 에라토스테네스의 체(Sieve of Eratosthenes) 이론"
+date: 2025-01-25 17:20:00 +0900
+last_modified_at: 2025-02-01 22:30:00 +0900
 categories:
   - Mathematics Theory
 tags:
@@ -13,6 +15,9 @@ tags:
   - algorithm
   - 정수론
   - number theory
+
+toc: true
+toc_sticky: true
 ---
 
 ## 💡 에라토스테네스의 체(Eratosthenes’ sieve) 개요

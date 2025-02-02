@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gideokkim.github.io//sitemap.xml

@@ -19,7 +19,7 @@ toc_sticky: true
 
 # 🎯 퍼셉트론(Perceptron)
 
-> 머신러닝의 기초적인 모델 중 하나이며 머신러닝의 발전 초기 단계에서  나온 알고리즘이다. 더 복잡한 모델인 신경망(Neural Networks)이나 딥러닝(Deep Learning)에 비해 한계가 많다.
+> 머신러닝의 기초적인 모델 중 하나이며 머신러닝의 발전 초기 단계에서 나온 알고리즘이다. 더 복잡한 모델인 신경망(Neural Networks)이나 딥러닝(Deep Learning)에 비해 한계가 많다.
 
 ## 1. 퍼셉트론이란?
 

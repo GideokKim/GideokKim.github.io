@@ -9,12 +9,16 @@ tags:
   - AI
   - neural network
   - batch normalization
-
+  - batch normalization formula
 toc: true
 toc_sticky: true
 ---
 
 # 🎯 배치 정규화(Batch Normalization)
+
+![Image](https://github.com/user-attachments/assets/4324b167-1c58-4845-afbd-eb65f4824109){: .align-center}
+
+*이미지 출처: 밑바닥부터 시작하는 딥러닝 1권 - 배치 정규화*
 
 > 배치 정규화(Batch Normalization)는 각 층에서의 활성화 값이 적당히 분포되도록 조정한다.
 
@@ -23,6 +27,10 @@ toc_sticky: true
   - 학습 속도 개선
   - 초기값에 크게 의존하지 않음
   - 오버피팅 억제
+
+---
+⚠️아래 수식은 아직 정리가 안되었습니다. 참고용으로 남겨둡니다.⚠️
+---
 
 > 미니배치 m개의 입력 데이터 집합의 평균과 분산
 

@@ -8,8 +8,12 @@ tags:
   - deep learning
   - AI
   - neural network
-  - convolutional neural network
+  - transfer learning
+  - ResNet
   - CNN
+  - computer vision
+  - ImageNet
+  - pytorch
 
 toc: true
 toc_sticky: true
@@ -92,6 +96,10 @@ toc_sticky: true
 
 *이미지 출처: [ResearchGate](https://www.researchgate.net/figure/A-demo-of-a-CONV-layer_fig2_364953720)*
 
+![Image](https://github.com/user-attachments/assets/f431b58b-c56b-4ee4-98aa-18169557c3ec){: .align-center}
+
+*이미지 출처: [Convolutional neural networks](https://bfirst.tech/en/convolutional-neural-networks/)*
+
 #### 채널(Channel)
 
 > 채널(Channel)은 이미지나 데이터의 깊이(depth) 차원을 의미
@@ -120,8 +128,30 @@ toc_sticky: true
 > 피처맵을 대표하는 값으로 압축함(sub sampling)
 
 - 피처맵에서 필터 크기를 바탕으로 최대값이나 평균값을 취한다.
+- 지역 정보 중 두드러진 정보를 추출한다.
 
----
-🧠아직 더 학습해야 할 내용이 많다. 추후 업데이트 예정⚠️
----
+![Image](https://github.com/user-attachments/assets/9e470716-5a61-4094-8eff-c2aa47b5a0c2){: .align-center}
+
+*이미지 출처: [Convolutional neural networks](https://bfirst.tech/en/convolutional-neural-networks/)*
+
+### Convolution layer vs Pooling layer
+
+- Convolution layer
+  - 필터와 편향을 학습시킨다.
+  - 채널이 사라진다.
+  - 필터를 훈련시켜 낮은 층의 필터는 저수준의 로컬한 특징을 찾아내고 높은 층의 필터는 더 고수준의 더 글로벌한 특징을 찾아내는 것이 목표다.
+- Pooling layer
+  - 학습시킬 parameter가 없다.
+  - 채널별로 독립적으로 시행한다.
+  - DownSampling을 통하여 다음 Convolution layer에서 더 빨리 글로벌한 특징을 찾아낼 수 있게 한다.
+  - parameter 숫자를 줄여서 계산비용을 줄이고 overfitting을 억제한다.
+  - 약간의 평행이동에 대하여 변하지 않도록 한다.
+
+## 5. 🚀 CNN 최종 구조
+
+> Convolution layer와 Max pooling층이 반복되다가 후반에 Fully Connected layer가 등장한다.
+
+- Convolution layer의 필터들은 학습 시작전에 랜덤하게 생성한다.
+- 데이터를 통한 학습을 통해 손실함수값을 낮추도록 필터를 훈련시킨다.
+- 충분한 학습이 이루어지면 낮은 층의 필터는 저수준의 로컬한 특징을 찾아내고 층이 높아질수록 더 고수준의 더 글로벌한 특징을 찾아낸다.
 

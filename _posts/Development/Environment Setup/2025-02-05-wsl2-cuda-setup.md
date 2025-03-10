@@ -123,55 +123,16 @@ nvcc --version
 
 ![Image](https://github.com/user-attachments/assets/3097b5d4-c568-4ed8-85a5-9a14423ae352){: .align-center}
 
-## 3. 🔒 WSL2에 CUDA Toolkit 설치를 위한 준비
+## 3. 📦 WSL2에 CUDA 설치
 
-> ubuntu version을 확인하고 설치해야 한다.
+> [CUDA 설치 페이지](https://developer.nvidia.com/cuda-downloads)에 접속하여 자신의 버전에 맞는 CUDA를 설치하자.
 
 - WSL2에 NVIDIA 드라이버는 설치할 필요가 없다. Windows에 설치한 드라이버로 알아서 설정된다.
+- 위에 언급한 CUDA 설치 페이지를 가면 아래처럼 내 환경에 맞는 설치 방법을 알려준다!
 
-### 3.1. ubuntu version 확인 및 필수 패키지 설치
+![Image](https://github.com/user-attachments/assets/703ffde8-2405-4608-8fd3-7dfdfd966b4d){: .align-center}
 
-```bash
-sudo apt update
-```
-
-```bash
-sudo apt upgrade
-```
-
-```bash
-# ubuntu version 확인
-lsb_release -a
-```
-
-```bash
-sudo apt install wget build-essential -y
-```
-
-### 3.2. CUDA keyring 설치
-
-> 키링은 패키지 관리 시스템에서 사용되는 키 관리 도구로, 패키지 저장소 정보를 관리하는 역할을 한다.
-
-- NVIDIA CUDA 키링을 설치하는 이유:
-  - 패키지의 신뢰성 검증: NVIDIA에서 제공하는 정품 소프트웨어임을 보장
-  - 안전한 업데이트: 인증된 소스에서만 업데이트를 받음
-  - 패키지 무결성 확인: 다운로드 과정에서 파일이 변조되지 않았음을 확인
-
-```bash
-# 여기서 나에게 맞는 ubuntu version을 선택하여 설치(eg. ubuntu2404)
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-keyring_1.1-1_all.deb
-sudo dpkg -i cuda-keyring_1.1-1_all.deb
-```
-
-## 4. 📦 CUDA 설치
-
-> 여기서 나에게 맞는 CUDA version을 선택하여 설치(eg. cuda-12.8)
-
-```bash
-sudo apt install cuda
-```
-
-## 5. 🔧 환경변수 설정
+## 4. 🔧 환경변수 설정
 
 ### `~/.bashrc`를 수정해야 하는 경우
 
@@ -189,16 +150,16 @@ echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-## 6. ✅ 최종 설치 확인
+## 5. ✅ 최종 설치 확인
 
 ```bash
 nvcc --version
 ```
 
-## 7. 📝 참고 사항
+## 6. 📝 참고 사항
 
-- keyring의 앞으로 쓰지 않을 가능성이 높으므로 삭제한다.
+- cuda-repo-wsl-ubuntu의 앞으로 쓰지 않을 가능성이 높으므로 삭제한다.
 
 ```bash
-rm cuda-keyring_1.1-1_all.deb
+rm cuda-repo-wsl-ubuntu-12-8-local_12.8.1-1_amd64.deb  
 ```

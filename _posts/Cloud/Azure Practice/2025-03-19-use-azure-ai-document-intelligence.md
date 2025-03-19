@@ -26,6 +26,8 @@ toc_sticky: true
 > Azure AI Document Intelligence 리소스를 생성해보자.
 
 - 우선 내 리소스 그룹에 들어가서 리소스를 생성해야 한다.
+  - Azure에서 AI Service를 사용하기 위해서 리소스 그룹을 만들고 그 안에 리소스를 생성하는 것은 동일하다.
+  - 단, AI Service의 경우에는 ‘Document Intelligence’와 같이 제품 하나씩 리소스를 생성할 수도 있고, ‘AI services’를 생성하여 여러 AI Service를 한 번에 관리할 수도 있다.
 
 ![Image](https://github.com/user-attachments/assets/33bac3df-a06a-40c6-97dc-ef239f13277d){: .align-center}
 

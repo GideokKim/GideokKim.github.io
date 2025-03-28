@@ -1,7 +1,7 @@
 ---
 title: "[C++ STL] string 모든 멤버 함수 코딩 테스트 대비 정리"
 date: 2025-03-26 09:00:00 +0900
-last_modified_at: 2025-03-26 09:00:00 +0900
+last_modified_at: 2025-03-28 09:00:00 +0900
 categories:
   - STL
 tags:
@@ -26,7 +26,7 @@ toc_sticky: true
 
 ## 멤버 함수
 
-### find
+### find - 문자열에서 특정 문자 또는 문자열 찾기
 
 > 문자열에서 특정 **문자 또는 문자열**을 찾는 멤버 함수이다.
 
@@ -55,4 +55,25 @@ if (str.find("World") != std::string::npos) {
 } else {
     std::cout << "찾지 못했습니다." << std::endl;
 }
+```
+
+### to_string - 숫자를 문자열로 변환
+
+> **숫자를 문자열로 변환**하는 멤버 함수이다.
+
+- 가끔 코딩 테스트에서 숫자를 문자열로 변환해야 하는 경우가 있다.
+
+```cpp
+std::to_string(n);
+```
+
+- `n`: 숫자(`int`, `long`, `float`, `double`, `long long`, `unsigned`, `unsigned long`, `unsigned long long`, `long double`)
+- 반환 값: 숫자를 문자열로 변환한 결과
+
+#### 예제
+
+```cpp
+int n = 123;
+std::string str = std::to_string(n);
+std::cout << str << std::endl;
 ```

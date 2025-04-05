@@ -31,17 +31,17 @@ toc_sticky: true
 
 - Azure Portal에 들어가서 이전에 생성한 Speech Resource에 들어가면 Speech Studio에 들어가는 버튼이 있다.
 
-![Image](https://github.com/user-attachments/assets/c62f1311-21ae-45da-bf6a-5768eade1715){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-18-use-azure-ai-speech-video-translation-preview/01.png){: .align-center}
 
 - Speech Studio에 들어가서 스크롤을 내리면 보이는 `비디오 번역(Video Translation)`을 선택하자.
 
-![Image](https://github.com/user-attachments/assets/39ec1bf6-6fd8-4a1e-adce-8d55a0bbc863){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-18-use-azure-ai-speech-video-translation-preview/02.png){: .align-center}
 
 - 프로젝트를 생성하자.
 - `음성 유형`을 `개인 보이스`로 하면 바로 사용해볼 수 있다.
 - 나는 테스트용 비디오가 스페인어 영상이라 `비디오의 언어`를 스페인어로 선택하였다.
 
-![Image](https://github.com/user-attachments/assets/97ef21e6-d645-4421-9aae-048f74874434){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-18-use-azure-ai-speech-video-translation-preview/03.png){: .align-center}
 
 ## 2. 🤖 비디오 번역 테스트
 
@@ -51,4 +51,4 @@ toc_sticky: true
 - 영상 다운로드도 가능하다!
 - 이 정도 퀄리티면 진짜 쓸 수 있는 곳이 많을 것 같다.
 
-![Image](https://github.com/user-attachments/assets/652ace1c-1f5f-48af-8e39-6e556a268e8e){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-18-use-azure-ai-speech-video-translation-preview/04.png){: .align-center}

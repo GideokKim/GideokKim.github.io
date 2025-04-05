@@ -29,21 +29,21 @@ toc_sticky: true
   - Azure에서 AI Service를 사용하기 위해서 리소스 그룹을 만들고 그 안에 리소스를 생성하는 것은 동일하다.
   - 단, AI Service의 경우에는 ‘Document Intelligence’와 같이 제품 하나씩 리소스를 생성할 수도 있고, ‘AI services’를 생성하여 여러 AI Service를 한 번에 관리할 수도 있다.
 
-![Image](https://github.com/user-attachments/assets/33bac3df-a06a-40c6-97dc-ef239f13277d){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/01.png){: .align-center}
 
 - Marketplace에서 `document intelligence`를 검색하고 `Azure 서비스만`을 체크하면 바로 보인다.
 - 들어가서 만들기를 선택하자.
 
-![Image](https://github.com/user-attachments/assets/d3986574-1184-4aed-89cc-8c9afd62fbd9){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/02.png){: .align-center}
 
 - 인스턴스 세부 정보를 나에게 맞게 입력하고 검토 및 만들기를 누르자.
 - 리소스는 금방 만들어진다.
 
-![Image](https://github.com/user-attachments/assets/6b736930-c378-4689-b92c-4ccdd7e05810){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/03.png){: .align-center}
 
 - 내 리소스에 들어가서 `Go to Document Intelligence Studio`를 누르면 이제 기능을 사용해볼 수 있다.
 
-![Image](https://github.com/user-attachments/assets/987cc438-a1be-4dfd-820f-60e9d880f88b){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/04.png){: .align-center}
 
 ## 2. Azure AI Document Intelligence  - Document analysis 사용하기
 
@@ -55,20 +55,20 @@ toc_sticky: true
 
 - Document Intelligence Studio에 들어가서 `OCR/Read`를 선택하자.
 
-![Image](https://github.com/user-attachments/assets/1e6a8cb6-0edf-46be-b9c6-33d246e03995){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/05.png){: .align-center}
 
 - 진입하면 Sample을 선택할 수 있고 `Analyze options`를 통해 여러 옵션을 선택할 수 있다.
 
-![Image](https://github.com/user-attachments/assets/ecbd1128-0b20-4e80-a228-ce91c02584d4){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/06.png){: .align-center}
 
 - `Run analysis`를 누르면 문서를 분석할 수 있다.
 - 아래처럼 바운딩 박스가 표시되고 어떤 글자들이 추출되었는지 확인할 수 있다.
   - Polygon은 바운딩 박스의 좌표를 의미한다.
 - 한국어도 잘 인식하는 것을 확인할 수 있다.
 
-![Image](https://github.com/user-attachments/assets/1b5e6572-74ec-4dc5-b75f-132aec9a64e4){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/07.png){: .align-center}
 
-![Image](https://github.com/user-attachments/assets/0834dda1-1f21-425a-9394-697d9fc0e23a){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/08.png){: .align-center}
 
 ### 2.2 Layout 사용하기
 
@@ -76,20 +76,20 @@ toc_sticky: true
 
 - Document Intelligence Studio에 들어가서 `Layout`을 선택하자.
 
-![Image](https://github.com/user-attachments/assets/4d8d686a-05e4-4efa-b25c-7462fece092b){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/09.png){: .align-center}
 
 - `OCR/Read`와 마찬가지로 `Analyze options`를 통해 여러 옵션을 선택할 수 있다.
 - `OCR/Read`와 다르게 `Layout`은 바운딩 박스에 있는 글자들이 어떤 항목에 들어가는지 표시가 된다.
 
-![Image](https://github.com/user-attachments/assets/33230abb-bb9a-4167-bddf-5746e02a8c2d){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/10.png){: .align-center}
 
 - `Query field`를 추가해서 추출을 원하는 field를 지정할 수 있다.
 
-![Image](https://github.com/user-attachments/assets/3f6e8054-1bb1-4df1-8c54-73fbf9c0b2fc){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/11.png){: .align-center}
 
 - 결과에 `Field`가 추가되고 어디가 title인지 알 수 있다!!
 
-![Image](https://github.com/user-attachments/assets/a5750a91-7246-434c-96f2-a6089cd5652d){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/12.png){: .align-center}
 
 
 ### 2.3 General document 사용하기
@@ -101,13 +101,13 @@ toc_sticky: true
 
 - Document Intelligence Studio에 들어가서 `General document`을 선택하자.
 
-![Image](https://github.com/user-attachments/assets/24fd7e68-75ec-4ceb-9634-003be6160529){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/13.png){: .align-center}
 
 - 이전과 마찬가지로 `Analyze options`를 통해 여러 옵션을 선택할 수 있다.
 - `Run analysis`를 누르면 문서를 분석할 수 있다.
 - 바운딩 박스가 생성 안된 곳은 어떤 키-값 쌍으로 묶어야 할지 판단이 안되어 묶지 않은 것으로 보인다.
 
-![Image](https://github.com/user-attachments/assets/6610222b-347a-4f7d-8e36-451c17997538){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/14.png){: .align-center}
 
 ## 3. Azure AI Document Intelligence  - Prebuilt models 사용하기
 
@@ -119,20 +119,20 @@ toc_sticky: true
 
 - Document Intelligence Studio에 들어가서 `Invoice`을 선택하자.
 
-![Image](https://github.com/user-attachments/assets/69271510-bc0c-45c0-b9d8-0b92943e16cc){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/15.png){: .align-center}
 
 - 우선 query field 없이 분석을 진행해보자.
   - 단순히 글자를 인식하는 것이 아니라 vendor사 이름이라는 것까지 추출해낸다....!!
 
-![Image](https://github.com/user-attachments/assets/b0f33905-7211-4c82-92e0-e7b00126d58c){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/16.png){: .align-center}
 
 - 그리고 query field를 추가하면 추출을 원하는 field를 지정할 수 있다!
 
-![Image](https://github.com/user-attachments/assets/ab89308b-3b3f-454a-9bc0-6610960724e1){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/17.png){: .align-center}
 
 - field를 추가하니 이전에는 못잡아내던 Account Number도 잘 잡아낸다.
 
-![Image](https://github.com/user-attachments/assets/8330aaec-d30f-4de0-a2ce-c63e11411a9d){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/18.png){: .align-center}
 
 ### 3.2 Receipt 사용하기
 
@@ -142,15 +142,15 @@ toc_sticky: true
 - 바로 아무런 옵션 없이 분석을 진행해보자.
   - 현재는 영수증에서 `Delivery fee`를 잘 못잡아내는 것을 확인할 수 있다.
 
-![Image](https://github.com/user-attachments/assets/7d67714c-0d01-4423-93b1-0353ecf770be){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/19.png){: .align-center}
 
 - `Query field`를 추가해서 `Delivery fee`를 잡아내보자.
 
-![Image](https://github.com/user-attachments/assets/098d990d-498d-4dbd-9b55-af36e0f078ee){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/20.png){: .align-center}
 
 - 이제 잘 잡아내는 것을 확인할 수 있다!!!
 
-![Image](https://github.com/user-attachments/assets/bfb10a71-0af1-42ed-b432-c2fab1f5065a){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/21.png){: .align-center}
 
 ### 3.3 Identity documents 사용하기
 
@@ -158,7 +158,7 @@ toc_sticky: true
 
 - *🌟참고로 한국 신분증도 된다!🌟*
 
-![Image](https://github.com/user-attachments/assets/da603f60-2b63-4754-9aea-5e02c7f6ba48){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/22.png){: .align-center}
 
 ### 3.4 Business cards 사용하기
 
@@ -166,7 +166,7 @@ toc_sticky: true
 
 - 전 직장 명함인데 잘 잡는 것을 확인할 수 있다.
 
-![Image](https://github.com/user-attachments/assets/2530bc72-7066-4297-8117-d758d3c925c4){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/23.png){: .align-center}
 
 ### 3.5 Credit cards 사용하기
 
@@ -174,4 +174,4 @@ toc_sticky: true
 
 - 샘플 카드로 해보니 잘 잡히는 것을 확인할 수 있다!
 
-![Image](https://github.com/user-attachments/assets/81f55e7c-07ea-42b6-b3fc-edbeefd4ad26){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-19-use-azure-ai-document-intelligence/24.png){: .align-center}

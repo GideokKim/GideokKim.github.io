@@ -18,7 +18,7 @@ toc_sticky: true
 
 > 포스팅 카테고리를 추가해서 좀 더 포스팅 글들을 종류별로 구분해보자.
 
-![Image](https://github.com/user-attachments/assets/57d39a7b-51be-45a9-b1bf-2f4608388623){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/etc/blog/2025-03-19-add-categories/01.png){: .align-center}
 
 ## `_pages` 폴더 생성
 
@@ -55,7 +55,7 @@ sidebar_main: true
   - 로컬 서버를 실행하는 명령어는 `bundle exec jekyll serve` 이다.
 - `Category`를 클릭하면 `404 Not Found` 페이지가 아닌 카테고리 페이지로 넘어간다.
 
-![Image](https://github.com/user-attachments/assets/e680f94d-da41-4104-a0d2-e3b97d5073d8){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/etc/blog/2025-03-19-add-categories/02.png){: .align-center}
 
 ---
 

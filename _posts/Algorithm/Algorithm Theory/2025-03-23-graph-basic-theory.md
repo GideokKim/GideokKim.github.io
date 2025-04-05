@@ -25,7 +25,7 @@ toc_sticky: true
 
 ### 그래프 용어 정리
 
-![Image](https://github.com/user-attachments/assets/196f1354-9981-4928-9c5a-a1e5415ea97c){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/algorithm/algorithm-theory/2025-03-23-graph-basic-theory/01.png){: .align-center}
 
 - 그래프는 방향성, 가중치, 순환 특성에 따라 종류를 구분할 수 있다.
 
@@ -45,7 +45,7 @@ toc_sticky: true
 - 순환은 특정 노드에서 시작해 간선을 따라 다시 돌아오는 경로가 있는 것을 말한다.
 - 순환이 존재하는 그래프를 **순환 그래프(cyclic graph)**, 순환이 존재하지 않는 그래프를 **비순환 그래프(acyclic graph)** 라고 한다.
 
-![Image](https://github.com/user-attachments/assets/46bbb98b-df1b-4d88-b695-d552fd773ce6){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/algorithm/algorithm-theory/2025-03-23-graph-basic-theory/02.png){: .align-center}
 
 ## 2. ✨ 그래프 구현 방법
 
@@ -60,7 +60,7 @@ toc_sticky: true
 	- 인덱스 가로 방향을 도착 노드
 - 값이 들어가지 않는 경우 굉장히 큰 값을 넣거나 -1로 채운다.
 
-![Image](https://github.com/user-attachments/assets/46fa4553-8216-42dc-a52a-f796fcadaf02){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/algorithm/algorithm-theory/2025-03-23-graph-basic-theory/03.png){: .align-center}
 
 ### 인접 리스트로 그래프 표현하기
 
@@ -69,7 +69,7 @@ toc_sticky: true
 - 노드 개수만큼 배열을 준비한다.
 - 배열의 인덱스는 각 시작 노드를 의미하며 배열의 값에는 해당 노드를 시작 노드로 하는 노드들을 추가한다.
 
-![Image](https://github.com/user-attachments/assets/1653907f-e3b7-4c12-b454-cf6ee0d3c19c){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/algorithm/algorithm-theory/2025-03-23-graph-basic-theory/04.png){: .align-center}
 
 ### 구현 방법에 대한 장단점 비교하기
 

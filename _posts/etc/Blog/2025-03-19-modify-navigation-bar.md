@@ -18,14 +18,14 @@ toc_sticky: true
 
 > 상단 네비게이션을 정리해보자. 실제 블로그에서는 아래 표시된 위치를 의미한다.
 
-![Image](https://github.com/user-attachments/assets/ae114958-cb3b-4f1e-b105-d2be82fb139b){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/etc/blog/2025-03-19-modify-navigation-bar/01.png){: .align-center}
 
 ## `_data/navigation.yml` 파일 수정
 
 - `_data/navigation.yml` 파일을 확인해보자.
 - 파일을 보면 외부에 있는 monimal-mistakes의 quick start guide 링크가 있다.
 
-![Image](https://github.com/user-attachments/assets/56a44c15-add1-43fa-81b9-a7fcddf8ce1e){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/etc/blog/2025-03-19-modify-navigation-bar/02.png){: .align-center}
 
 - 일단 블로그 구성 자체에 내 연락처나 GitHub 주소 등 많은 정보들이 이미 있어서 심플하게 홈, 카테고리 정도만 있으면 될 것 같다.
 - 따라서 아래처럼 수정하였다.
@@ -55,7 +55,7 @@ main:
 - `Category`를 클릭하면 아직 카테고리를 만들지 않아서 `404 Not Found` 페이지로 이동한다.
   - 이건 카테고리를 만들면서 해결할 수 있으니 우선은 넘어가도록 한다.
 
-![Image](https://github.com/user-attachments/assets/5bd1fb1d-6e74-4c7c-9ae9-437ad45016a9){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/etc/blog/2025-03-19-modify-navigation-bar/03.png){: .align-center}
 
 ---
 

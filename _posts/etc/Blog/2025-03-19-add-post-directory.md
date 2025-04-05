@@ -23,7 +23,7 @@ toc_sticky: true
 - 포스팅하는 글들을 모아둘 폴더를 생성하자.
   - 폴더 이름은 반드시 `_posts` 폴더여야 한다.
 
-![Image](https://github.com/user-attachments/assets/b8b3ab74-47ea-4243-b69e-a24f92d77ef5){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/etc/blog/2025-03-19-add-post-directory/01.png){: .align-center}
 
 # 2. 📝 포스팅해보기
 
@@ -71,21 +71,21 @@ toc_sticky: true
 - 나는 테스트를 위해 아래처럼 간단하게 작성하였다.
 - 내용은 markdown 문법을 사용하여 작성하면 된다.
 
-![Image](https://github.com/user-attachments/assets/83ff2a8b-458a-4f6d-b0e1-afac703ec709){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/etc/blog/2025-03-19-add-post-directory/02.png){: .align-center}
 
 # 3. ✅ 포스팅된 글 확인해보기
 
 - 로컬에서 들어가보면 바로 최근에 작성한 글을 아래처럼 볼 수 있다.
   - 로컬 서버를 실행하는 명령어는 `bundle exec jekyll serve` 이다.
 
-![Image](https://github.com/user-attachments/assets/67d956fc-4a0c-468a-bc88-d3013489ce44){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/etc/blog/2025-03-19-add-post-directory/03.png){: .align-center}
 
 - 글을 직접 들어가서 확인해보자!
 - 주소를 보면 `127.0.0.1:4000/blog/hello-world/`로 되어 있는 것을 볼 수 있다.
   - 우리가 작성한 카테고리와 문서의 이름에 따라 주소가 결정되는 것을 알 수 있다.
 - 그리고 앞서 작성한 머리말에 들어가는 메타 데이터들이 있다.
 
-![Image](https://github.com/user-attachments/assets/ef1527d2-0eff-4a3b-9062-6b32fe1f0437){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/etc/blog/2025-03-19-add-post-directory/04.png){: .align-center}
 
 ---
 

@@ -34,12 +34,12 @@ toc_sticky: true
 - `vision` 검색 후 `Computer Vision`를 선택하자.
 - 아마 `Azure 서비스만`을 체크해야 잘 찾을 수 있을 것이다.
 
-![Image](https://github.com/user-attachments/assets/5985c7c6-3f8a-4d4a-a3f5-79c43dcefcaa){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-24-use-azure-ai-vision-studio/01.png){: .align-center}
 
 - 기본 정보를 입력하고 리소스를 만들자.
-  - 지역마다 제공되는 서비스가 많이 다르므로 주의하자.
+  - **지역마다 제공되는 서비스가 많이 다르므로 주의하자.**
 
-![Image](https://github.com/user-attachments/assets/8f16cc55-ca8c-4752-bde4-115cbc82199a){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-24-use-azure-ai-vision-studio/02.png){: .align-center}
 
 ## 2. Azure AI Vision Studio 사용하기
 
@@ -50,11 +50,11 @@ toc_sticky: true
 - 모델을 학습하는 것이 아니라 이미 학습된 모델을 사용하는 서비스이다.
 - Vision Studio에 들어가서 `Detect common objects in images`를 선택하자.
 
-![Image](https://github.com/user-attachments/assets/3461f131-6e22-4530-8104-f6461e1dd7fa){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-24-use-azure-ai-vision-studio/03.png){: .align-center}
 
 - 이미지를 업로드하고 결과를 확인할 수 있다.
 
-![Image](https://github.com/user-attachments/assets/74c12a70-cc28-4177-a50b-49861fe26736){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-24-use-azure-ai-vision-studio/04.png){: .align-center}
 
 ### 2.2 Add captions to images
 
@@ -62,11 +62,11 @@ toc_sticky: true
 
 - Vision Studio에 들어가서 `Add captions to images`를 선택하자.
 
-![Image](https://github.com/user-attachments/assets/1d85f446-0246-41d4-a1da-479256959d23){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-24-use-azure-ai-vision-studio/05.png){: .align-center}
 
 - 이미지를 업로드하고 결과를 확인할 수 있다.
 
-![Image](https://github.com/user-attachments/assets/752f89b5-30e8-4a05-bcee-06f17caeb73b){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-24-use-azure-ai-vision-studio/06.png){: .align-center}
 
 ### 2.3 Add dense captions to images
 
@@ -74,13 +74,13 @@ toc_sticky: true
 
 - Vision Studio에 들어가서 `Add dense captions to images`를 선택하자.
 
-![Image](https://github.com/user-attachments/assets/15656a41-4e5c-4bad-9ffb-b6531eb527c1){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-24-use-azure-ai-vision-studio/07.png){: .align-center}
 
 - 이미지를 업로드하고 결과를 확인할 수 있다.
   - 이전과는 다르게 여러 바운딩 박스가 생긴 것을 확인할 수 있고 각 바운딩 박스마다 캡션이 있다.
   - json으로 보면 confidence도 있는 것을 확인할 수 있다.
 
-![Image](https://github.com/user-attachments/assets/d0a7790d-d3a9-4acc-ab9c-d2ee4a065b45){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-24-use-azure-ai-vision-studio/08.png){: .align-center}
 
 ### 2.4 Extract common tags from images
 
@@ -88,11 +88,11 @@ toc_sticky: true
 
 - Vision Studio에 들어가서 `Extract common tags from images`를 선택하자.
 
-![Image](https://github.com/user-attachments/assets/3be56a5d-2dfc-491d-8d6d-90f1b406ea8d){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-24-use-azure-ai-vision-studio/09.png){: .align-center}
 
 - 이미지를 업로드하고 결과를 확인할 수 있다.
 
-![Image](https://github.com/user-attachments/assets/1faecc0b-1a28-4e68-b639-90d2fc20f5af){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-24-use-azure-ai-vision-studio/10.png){: .align-center}
 
 ### 2.5 Create smart-cropped images
 
@@ -100,10 +100,10 @@ toc_sticky: true
 
 - Vision Studio에 들어가서 `Create smart-cropped images`를 선택하자.
 
-![Image](https://github.com/user-attachments/assets/f18a68fd-9907-49f9-8920-8c177635a4c8){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-24-use-azure-ai-vision-studio/11.png){: .align-center}
 
 - 이미지를 업로드하고 결과를 확인할 수 있다.
   - 자동으로 잘라주는 기능인데, 굳이 쓸 일이 있을까 싶은 수준의 결과를 보여준다.
   - ~~딱히 smart하다고 보기 힘든 기능~~
 
-![Image](https://github.com/user-attachments/assets/65ef8357-6fa9-40df-b349-3cc633f9e260){: .align-center}
+![Image]({{ site.url }}{{ site.baseurl }}/images/cloud/azure-practice/2025-03-24-use-azure-ai-vision-studio/12.png){: .align-center}

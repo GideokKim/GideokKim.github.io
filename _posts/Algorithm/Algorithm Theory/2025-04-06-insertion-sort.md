@@ -72,6 +72,8 @@ $$
 
 ## 5. 📝 삽입 정렬의 구현
 
+### 5.1. C++
+
 ```cpp
 #include <iostream>
 #include <vector>

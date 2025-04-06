@@ -92,7 +92,7 @@ toc_sticky: true
 3 4 5    1->3: 1, 1->4: 5, 1->5: 2
 ```
 
-### 5.1. C++
+### 6.1. C++
 
 {% raw %}
 ```cpp
@@ -100,15 +100,15 @@ toc_sticky: true
 #include <vector>
 #include <limits>
 
-void bellman_ford(int start, const std::vector<std::vector<std::pair<int, int>>>& graph, int V) {
-    std::vector<int> dist(V, std::numeric_limits<int>::max());
+void bellman_ford(size_t start, const std::vector<std::vector<std::pair<size_t, long long>>>& graph, size_t n) {
+    std::vector<long long> dist(n, std::numeric_limits<long long>::max());
     dist[start] = 0;
 
-    // V-1번 반복
-    for (int i = 1; i < V; i++) {
-        for (int u = 0; u < V; u++) {
-            for (const auto& [v, weight] : graph[u]) {
-                if (dist[u] != std::numeric_limits<int>::max() && dist[u] + weight < dist[v]) {
+    // n-1번 반복
+    for (size_t i = 1; i < n; i++) {
+        for (size_t u = 0; u < n; u++) {
+            for (auto [v, weight] : graph[u]) {
+                if (dist[u] != std::numeric_limits<long long>::max() && dist[u] + weight < dist[v]) {
                     dist[v] = dist[u] + weight;
                 }
             }
@@ -116,28 +116,28 @@ void bellman_ford(int start, const std::vector<std::vector<std::pair<int, int>>>
     }
 
     // 음수 사이클 체크
-    for (int u = 0; u < V; u++) {
-        for (const auto& [v, weight] : graph[u]) {
-            if (dist[u] != std::numeric_limits<int>::max() && dist[u] + weight < dist[v]) {
-                std::cout << "Negative weight cycle detected!" << std::endl;
+    for (size_t u = 0; u < n; u++) {
+        for (auto [v, weight] : graph[u]) {
+            if (dist[u] != std::numeric_limits<long long>::max() && dist[u] + weight < dist[v]) {
+                std::cout << "Negative weight cycle detected!\n";
                 return;
             }
         }
     }
 
     // 결과 출력
-    for (int i = 0; i < V; i++) {
+    for (size_t i = 0; i < n; i++) {
         std::cout << "Node " << i << ": ";
-        if (dist[i] == std::numeric_limits<int>::max())
-            std::cout << "INF" << std::endl;
+        if (dist[i] == std::numeric_limits<long long>::max())
+            std::cout << "INF\n";
         else
-            std::cout << dist[i] << std::endl;
+            std::cout << dist[i] << "\n";
     }
 }
 
 int main() {
-    int V = 6; // 노드 수
-    std::vector<std::vector<std::pair<int, int>>> graph(V);
+    size_t v = 6; // 노드 수
+    std::vector<std::vector<std::pair<size_t, long long>>> graph(v);
 
     // 그래프 정의 (노드, {연결된 노드, 가중치})
     graph[0] = {{1, 4}, {2, 2}};
@@ -147,13 +147,13 @@ int main() {
     graph[4] = {{1, 5}};
     graph[5] = {{1, 2}};
 
-    bellman_ford(0, graph, V);  // 시작 노드: 0
+    bellman_ford(0, graph, v);  // 시작 노드: 0
     return 0;
 }
 ```
 {% endraw %}
 
-### 5.2. Python
+### 6.2. Python
 
 ```python
 import heapq

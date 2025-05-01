@@ -1,6 +1,7 @@
 ---
 title: "[C++] 공백을 포함한 문자열 입력 받고 처리하기(std::getline(), std::ignore(), std::stringstream)"
 date: 2025-01-30 15:00:00 +0900
+last_modified_at: 2025-05-01 18:00:00 +0900
 categories:
   - Cpp Coding Test
 tags:
@@ -9,6 +10,9 @@ tags:
   - std::getline
   - std::ignore
   - std::stringstream
+
+toc: true
+toc_sticky: true
 ---
 
 # 🎯 목표
@@ -79,31 +83,39 @@ int main() {
 - 구분자를 만나지 않으면 최대 string::max_size()까지 읽는다.
 
 ```cpp
-// 기본 사용 예제
+// 사용자 지정 구분자 예제
 #include <iostream>
 #include <string>
 
 int main() {
-    std::cout << "주소 입력: ";
-    std::string address;
-    std::getline(std::cin, address); // 공백 포함 입력
+    std::string data;
     
-    std::cout << "입력된 주소: " << address;
+    // 세미콜론(;)을 구분자로 사용
+    std::cout << "세미콜론으로 구분된 데이터 입력: ";
+    std::getline(std::cin, data, ';');
+    std::cout << "입력된 데이터: " << data << std::endl;
+    
+    // 콤마(,)를 구분자로 사용
+    std::cout << "콤마로 구분된 데이터 입력: ";
+    std::getline(std::cin, data, ',');
+    std::cout << "입력된 데이터: " << data << std::endl;
+    
     return 0;
 }
 ```
 
 ```cpp
-// 파일 읽기 예제
+// 파일에서 특정 구분자로 읽기 예제
 #include <fstream>
 #include <string>
 
 int main() {
-    std::ifstream file("data.txt");
-    std::string line;
+    std::ifstream file("data.csv");
+    std::string field;
     
-    while(std::getline(file, line)) {
-        // 파일의 각 라인 처리
+    // CSV 파일에서 콤마로 구분된 필드 읽기
+    while(std::getline(file, field, ',')) {
+        std::cout << "필드 값: " << field << std::endl;
     }
     return 0;
 }

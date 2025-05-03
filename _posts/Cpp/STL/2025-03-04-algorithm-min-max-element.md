@@ -1,7 +1,7 @@
 ---
 title: "[C++ STL] min_element, max_element(최소값, 최대값 찾기) 사용법"
 date: 2025-03-04 09:00:00 +0900
-last_modified_at: 2025-03-04 09:00:00 +0900
+last_modified_at: 2025-05-03 16:00:00 +0900
 categories:
   - STL
 tags:
@@ -50,7 +50,14 @@ std::max_element(first, last);
 #include <algorithm>
 
 int main() {
-    std::vector<int> v = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5};
+    std::vector<int> v = {3, 1, 4, 7, 5, 9, 2, 6, 5, 3, 5};
+    std::cout << *std::min_element(v.begin(), v.end()) << std::endl;
+    std::cout << *std::max_element(v.begin(), v.end()) << std::endl;
+
+    // 최소값과 최대값을 배열에서 삭제
+    v.erase(std::min_element(v.begin(), v.end()));
+    v.erase(std::max_element(v.begin(), v.end()));
+
     std::cout << *std::min_element(v.begin(), v.end()) << std::endl;
     std::cout << *std::max_element(v.begin(), v.end()) << std::endl;
 }
@@ -60,4 +67,6 @@ int main() {
 Output:
 1
 9
+2
+7
 ```

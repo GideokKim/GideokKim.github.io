@@ -1,7 +1,7 @@
 ---
 title: "[알고리즘] 동적 계획법(Dynamic Programming) - 최장 공통 부분 수열(LCS)"
 date: 2025-03-11 14:00:00 +0900
-last_modified_at: 2025-03-11 14:00:00 +0900
+last_modified_at: 2025-05-06 22:00:00 +0900
 categories:
   - Algorithm Theory
 tags:
@@ -44,8 +44,8 @@ toc_sticky: true
 - `dp[i][j]`는 첫번째 수열의 `i`번째 원소와 두번째 수열의 `j`번째 원소를 끝으로 하는 LCS의 길이를 저장한다.
 - 초기값은 `dp[0][0] = 0`이다.
 - 점화식은 다음과 같다.
-  - `dp[i][j] = max(dp[i-1][j], dp[i][j-1])` (단, `i > 0`이고 `j > 0`이고 `str1[i] != str2[j]`)
-  - `dp[i][j] = dp[i-1][j-1] + 1` (단, `i > 0`이고 `j > 0`이고 `str1[i] == str2[j]`)
+  - `dp[i][j] = max(dp[i-1][j], dp[i][j-1])` (단, `i > 0`이고 `j > 0`이고 `str1[i-1] != str2[j-1]`)
+  - `dp[i][j] = dp[i-1][j-1] + 1` (단, `i > 0`이고 `j > 0`이고 `str1[i-1] == str2[j-1]`)
 
 ```cpp
 #include <iostream>

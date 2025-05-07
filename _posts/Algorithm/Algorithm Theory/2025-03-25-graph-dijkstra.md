@@ -1,7 +1,7 @@
 ---
 title: "[알고리즘] 다익스트라 알고리즘(Dijkstra Algorithm) 구현(C++, Python)"
 date: 2025-03-25 16:00:00 +0900
-last_modified_at: 2025-03-25 16:00:00 +0900
+last_modified_at: 2025-05-07 21:00:00 +0900
 categories:
   - Algorithm Theory
 tags:
@@ -52,7 +52,15 @@ toc_sticky: true
 
 ![Image]({{ site.url }}{{ site.baseurl }}/images/algorithm/algorithm-theory/2025-03-25-graph-dijkstra/01.png){: .align-center}
 
-## 5. 📝 코드 구현
+## 5. 🚀 응용
+
+### 모든 노드가 출발 노드가 되는 경우
+
+> 주어지는 그래프의 방향을 반대로 뒤집고 도착해야 할 노드를 출발 노드로 설정하면 구해진 값들이 각 노드로부터 도착해야 할 노드까지의 최소 비용이 된다.
+
+![Image]({{ site.url }}{{ site.baseurl }}/images/algorithm/algorithm-theory/2025-03-25-graph-dijkstra/02.png){: .align-center}
+
+## 6. 📝 코드 구현
 
 > 우선순위 큐를 활용한 구현과 배열을 활용한 구현을 모두 소개한다. 배열을 활용한 구현은 시간 복잡도가 더 높아 노드 수가 많아지면 성능이 급격히 저하된다.
 

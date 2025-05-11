@@ -1,7 +1,7 @@
 ---
 title: "[알고리즘] 다익스트라 알고리즘(Dijkstra Algorithm) 구현(C++, Python)"
 date: 2025-03-25 16:00:00 +0900
-last_modified_at: 2025-05-07 21:00:00 +0900
+last_modified_at: 2025-05-11 22:00:00 +0900
 categories:
   - Algorithm Theory
 tags:
@@ -100,25 +100,22 @@ void dijkstra(int start, const std::vector<std::vector<std::pair<int, int>>>& gr
     
     // 시작 노드 초기화
     dist[start] = 0;
-    pq.push({0, start});
+    pq.push({start, dist[start]});
     
     while (!pq.empty()) {
-        int current_dist = pq.top().first;
-        int current = pq.top().second;
+        auto [current_node, current_dist] = pq.top();
         pq.pop();
         
         // 현재 거리가 이미 알고 있는 거리보다 크면 스킵
-        if (current_dist > dist[current]) continue;
+        if (current_dist > dist[current_node]) continue;
         
         // 인접 노드들을 확인
-        for (const auto& [next, weight] : graph[current]) {
-            int new_dist = dist[current] + weight;
-            
+        for (const auto& [next_node, next_dist] : graph[current_node]) {
             // 더 짧은 경로를 발견한 경우
-            if (new_dist < dist[next]) {
-                dist[next] = new_dist;
-                prev[next] = current;
-                pq.push({new_dist, next});
+            if (current_dist + next_dist < dist[next_node]) {
+                dist[next_node] = current_dist + next_dist;
+                prev[next_node] = current_node;
+                pq.push({next_node, dist[next_node]});
             }
         }
     }

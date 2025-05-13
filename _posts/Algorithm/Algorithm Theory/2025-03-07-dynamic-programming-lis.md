@@ -1,7 +1,7 @@
 ---
 title: "[알고리즘] 동적 계획법(Dynamic programming) - 최장 증가 부분 수열(LIS)"
 date: 2025-03-07 09:00:00 +0900
-last_modified_at: 2025-03-07 09:00:00 +0900
+last_modified_at: 2025-05-13 23:00:00 +0900
 categories:
   - Algorithm Theory
 tags:
@@ -82,6 +82,131 @@ int main() {
     }
 
     std::cout << *std::max_element(dp.begin(), dp.end());
+}
+```
+
+### 최적화 LIS 알고리즘의 원리와 특징
+
+> 앞서 소개한 동적 계획법(DP) 방식은 이중 반복문을 사용하여 $O(N^2)$의 시간복잡도를 가진다. 하지만, 이보다 더 빠른 $O(N \log N)$의 시간복잡도로 LIS의 길이만을 구할 수 있는 방법이 있다.
+
+#### 핵심 아이디어
+
+- 이 방법은 실제 LIS를 구하는 것이 아니라, LIS의 `길이`만을 빠르게 구하는 데 초점을 둔다.
+- **이분 탐색**(binary search)과 **임시 수열(lis 배열)**을 활용한다.
+- 임시 수열(lis)은 실제 LIS가 아닐 수 있지만, 그 길이는 항상 정답과 같다.
+
+#### 동작 방식
+
+1. 임시 수열 `lis`를 빈 배열로 시작한다.
+2. 수열의 각 원소를 순서대로 확인한다.
+   - 만약 현재 원소가 `lis`의 마지막 값보다 크면, `lis`에 추가한다.
+   - 그렇지 않으면, `lis`에서 현재 원소 이상이 처음 등장하는 위치(이분 탐색)를 찾아 그 값을 현재 원소로 교체한다.
+3. 이렇게 하면 `lis`의 길이가 곧 LIS의 길이가 된다.
+
+#### 예시 코드
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    size_t n;
+    std::cin >> n;
+    std::vector<int> numbers(n);
+    for (size_t i = 0; i < n; ++i) {
+        std::cin >> numbers[i];
+    }
+
+    std::vector<int> lis;
+    lis.push_back(numbers[0]);
+
+    for (size_t i = 1; i < n; ++i) {
+        if (numbers[i] > lis.back()) {
+            lis.push_back(numbers[i]);
+        } else {
+            auto it = std::lower_bound(lis.begin(), lis.end(), numbers[i]);
+            *it = numbers[i];
+        }
+    }
+    std::cout << lis.size();
+}
+```
+
+#### 예시 동작
+
+수열 `[1, 4, 2, 3, 1, 5, 7, 3]`에 대해 위 알고리즘이 동작하는 과정을 살펴보면:
+- 1 → [1]
+- 4 → [1, 4]
+- 2 → [1, 2]
+- 3 → [1, 2, 3]
+- 1 → [1, 2, 3]
+- 5 → [1, 2, 3, 5]
+- 7 → [1, 2, 3, 5, 7]
+- 3 → [1, 2, 3, 5, 7]
+
+최종적으로 `lis`의 길이 5가 정답이 된다.
+
+#### 시간복잡도
+
+- 각 원소마다 이분 탐색($O(\log N)$)을 하므로 전체 시간복잡도는 $O(N \log N)$이다.
+
+#### 주의점
+
+- 이 방법으로 구한 `lis` 배열은 실제 LIS와 다를 수 있다. (길이만 같음)
+- 실제 LIS의 원소를 모두 구하려면 추가적인 추적이 필요하다.
+
+### 실제 LIS 원소 구하기
+
+> 앞서 설명한 O(N log N) 방식은 LIS의 길이만을 빠르게 구할 수 있지만, 실제 LIS 원소 전체를 구하려면 추가적인 추적이 필요하다.
+
+#### pos 배열을 활용한 역추적 원리
+
+- pos[i]는 numbers[i]가 lis의 몇 번째 위치에 들어갔는지 기록한다.
+- 마지막 인덱스부터 pos[i]가 현재 찾고 있는 LIS의 위치(j)와 같을 때만 lis에 넣어주면 실제 LIS가 복원된다.
+
+#### 예시 코드
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    size_t n;
+    std::cin >> n;
+    std::vector<int> numbers(n);
+    for (size_t i = 0; i < n; ++i) {
+        std::cin >> numbers[i];
+    }
+
+    std::vector<int> lis;
+    std::vector<int> pos(n);
+    
+    for (size_t i = 0; i < n; ++i) {
+        auto it = std::lower_bound(lis.begin(), lis.end(), numbers[i]);
+        if (it == lis.end()) {
+            lis.push_back(numbers[i]);
+        } else {
+            *it = numbers[i];
+        }
+        pos[i] = static_cast<int>(it - lis.begin());
+    }
+
+    // 실제 LIS 복원
+    int curr = static_cast<int>(n - 1);
+    int lis_idx = static_cast<int>(lis.size() - 1);
+    while (curr >= 0 && lis_idx >= 0) {
+        if (pos[curr] == lis_idx) {
+            lis[lis_idx] = numbers[curr];
+            --lis_idx;
+        }
+        --curr;
+    }
+
+    std::cout << "LIS 길이: " << lis.size() << '\n';
+    std::cout << "LIS: ";
+    for (int v : lis) std::cout << v << ' ';
 }
 ```
 

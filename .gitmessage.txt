@@ -17,11 +17,11 @@ Related: #<issue number>
 
 
 # ─── Example: Simple refactor ────────────────────────────────────────────────┤
-# refac: remove system dictator
+# refac: remove custom matrix multiplication
 #
-# Since the owner of all contracts in this system is ProxyAdmin, SystemDictator
-# is no longer necessary. Additionally, the deployment scripts have been
-# modified to update the proxy when deploying implementation contracts.
+# Since we now use BLAS for all matrix operations, our custom matrix
+# multiplication implementation is redundant. Additionally, the test cases
+# have been updated to use BLAS operations.
 #
 # Resolves: #36332
 # ─────────────────────────────────────────────────────────────────────────────┤
@@ -33,22 +33,24 @@ Related: #<issue number>
 
 
 # ─── Example: A bug fix ──────────────────────────────────────────────────────┤
-# fix(trie): use hash once on account to compute path
+# fix(solver): use relative error for convergence check
 #
-# Path must be computed using poseidon hash once. But, by mistake, it
-# was computed using twice.
+# The Newton-Raphson method must use relative error for convergence check.
+# But, by mistake, it was using absolute error. This caused premature
+# termination in some cases.
 # ─────────────────────────────────────────────────────────────────────────────┤
 
 # ─── Example: A feature ──────────────────────────────────────────────────────┤
-# feat!: use keccak256 for codehash
+# feat!: implement sparse matrix solver
 #
-# BREAKING CHANGE: Previously, codehash was calculated using poseidon.
-# So the state root since this commit will be produced differently.
+# BREAKING CHANGE: Previously, all matrices were stored in dense format.
+# Now we use Compressed Sparse Row (CSR) format for better memory
+# efficiency. This affects all matrix operations and solver interfaces.
 #
 # See belows for details.
 #
-# - https://eips.ethereum.org/EIPS/eip-1052
-# - https://github.com/scroll-tech/go-ethereum/pull/188
+# - https://docs.scipy.org/doc/scipy/reference/sparse.html
+# - https://github.com/scipy/scipy/pull/188
 # ─────────────────────────────────────────────────────────────────────────────┤
 
 # Commit Message Format
@@ -67,7 +69,7 @@ Related: #<issue number>
 #
 # The header is mandatory.
 #
-# The body is mandatory for all commits except for those of type “docs”. When
+# The body is mandatory for all commits except for those of type "docs". When
 # the body is present it must be at least 20 characters long.
 #
 # The footer is optional.
@@ -83,9 +85,9 @@ Related: #<issue number>
 #   │       │             └─⫸ Summary in present tense. Not capitalized.
 #   │       │                 No period at the end.
 #   │       │
-#   │       └─⫸ Commit Scope: base|benchmark|build|c(subscope)|cc(subscope)|
-#   │                         circom|crypto|device|examples|halo2|math|
-#   │                         node(subscope)|plonky3|rs(subscope)|sp1|zk
+#   │       └─⫸ Commit Scope: base|benchmark|build|linear_algebra|optimization|
+#   │                         numerical|ode|pde|statistics|visualization|
+#   │                         matrix|solver|interpolation|integration
 #   │
 #   └─⫸ Commit Type: build|chore|ci|docs|feat|fix|perf|refac|style|test
 # ```
@@ -93,8 +95,8 @@ Related: #<issue number>
 # Commit Message Body
 # -------------------
 #
-# Just as in the summary, use the imperative, present tense: “fix” not “fixed”
-# nor “fixes”.
+# Just as in the summary, use the imperative, present tense: "fix" not "fixed"
+# nor "fixes".
 #
 # Explain the motivation for the change in the commit message body. This commit
 # message should explain why you are making the change. You can include a
@@ -118,5 +120,5 @@ Related: #<issue number>
 # Resolves|Related #<issue number>
 # ```
 #
-# USAGE section should start with the phrase “USAGE: ” followed by a summary of
+# USAGE section should start with the phrase "USAGE: " followed by a summary of
 # the usage summary, a blank line, and a detailed description of the usage.

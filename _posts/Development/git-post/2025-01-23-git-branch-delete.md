@@ -6,6 +6,9 @@ tags:
   - git
   - branch
   - delete
+
+toc: true
+toc_sticky: true
 ---
 
 # ⚡ Git 브랜치 삭제하기

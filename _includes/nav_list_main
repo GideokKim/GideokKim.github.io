@@ -65,7 +65,14 @@
                 {% endfor %}
             </ul>
 
-        <span class="nav__sub-title">Graphics</span>
+        <span class="nav__sub-title">Computer Vision</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Computer Vision Theory" %}
+                        <li><a href="/categories/computer-vision-theory" class="">CV Theory ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "OpenCV" %}

@@ -69,7 +69,7 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Computer Vision Theory" %}
-                        <li><a href="/categories/computer-vision-theory" class="">CV Theory ({{category[1].size}})</a></li>
+                        <li><a href="/categories/computer-vision-theory" class="">Computer Vision Theory ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

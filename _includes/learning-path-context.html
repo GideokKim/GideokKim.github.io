@@ -1,0 +1,22 @@
+{% assign matched_path = nil %}
+{% assign matched_category = nil %}
+{% if page.categories and page.categories[0] %}
+  {% for path in site.data.learning_paths.paths %}
+    {% for category_link in path.categories %}
+      {% if category_link.name == page.categories[0] %}
+        {% assign matched_path = path %}
+        {% assign matched_category = category_link %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
+
+{% if matched_path %}
+  <aside class="learning-context" aria-label="이 글의 학습 경로">
+    <p class="learning-context__eyebrow">Learning Path</p>
+    <h2>{{ matched_path.title }}</h2>
+    <p>{{ matched_path.description }}</p>
+    <a href="{{ matched_category.url | relative_url }}">{{ matched_category.label | default: matched_category.name }} 글 더 보기</a>
+    <a href="{{ '/index.html#path-' | append: matched_path.id | relative_url }}">전체 경로 보기</a>
+  </aside>
+{% endif %}

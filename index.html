@@ -3,3 +3,40 @@ layout: home
 sidebar_main: true
 author_profile: true
 ---
+
+<section class="learning-hero">
+  <p class="learning-hero__eyebrow">Learning Roadmap Blog</p>
+  <h1>수학적 사고로 개발을 학습하는 기술 로드맵</h1>
+  <p class="learning-hero__lead">
+    코딩 테스트 기본기부터 수학·CS 이론, C++ 성능 지향 개발, AI·컴퓨터 비전, 실무 도구까지
+    다음에 무엇을 읽을지 보이도록 정리하는 학습형 기술 블로그입니다.
+  </p>
+  <div class="learning-hero__actions">
+    <a class="btn btn--primary" href="#learning-paths">학습 경로 보기</a>
+    <a class="btn" href="{{ '/categories/' | relative_url }}">전체 카테고리</a>
+  </div>
+</section>
+
+<section id="learning-paths" class="learning-paths" aria-labelledby="learning-paths-title">
+  <div class="section-heading">
+    <p class="section-heading__eyebrow">Start Here</p>
+    <h2 id="learning-paths-title">학습 경로</h2>
+    <p>관심 주제보다 “지금 어디서 시작해야 하는가”를 먼저 볼 수 있도록 묶었습니다.</p>
+  </div>
+
+  <div class="learning-path-grid">
+    {% for path in site.data.learning_paths.paths %}
+      <article class="learning-path-card" id="path-{{ path.id }}">
+        <p class="learning-path-card__subtitle">{{ path.subtitle }}</p>
+        <h3>{{ path.title }}</h3>
+        <p>{{ path.description }}</p>
+        <p class="learning-path-card__start">추천 시작점: <strong>{{ path.start }}</strong></p>
+        <ul class="learning-path-card__links">
+          {% for category in path.categories %}
+            <li><a href="{{ category.url | relative_url }}">{{ category.label | default: category.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </article>
+    {% endfor %}
+  </div>
+</section>

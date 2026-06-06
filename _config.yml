@@ -80,3 +80,13 @@ collections:
 
 google_site_verification: "hACdPEp-NYSwOmtV4Vpnuf3EsSrD6HKrTTPNdoiVCoA"
 naver_site_verification: "f35c9a12a9b4cc4a89be107f4702bc7dfc2b3bc9"
+
+# Analytics
+# 방문자 수 트래킹을 켜려면 Google Analytics 4에서 Web stream의 Measurement ID
+# (예: G-XXXXXXXXXX)를 발급받아 아래 tracking_id에 넣으면 됩니다.
+# _includes/analytics.html에서 빈 tracking_id는 배포 환경에서도 로드하지 않도록 보호합니다.
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: ""
+    anonymize_ip: true

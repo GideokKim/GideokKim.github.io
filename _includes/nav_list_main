@@ -203,9 +203,14 @@
                 {% endfor %}
             </ul>
       </li>
-      <li>
+      <li class="nav__visit-counter">
             <br>
-            <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fhits.dwyl.com%2FGideokKim%2Fgithub.io.json&style=flat&color=blue">
+            <a href="https://hits.sh/gideokkim.github.io/" aria-label="블로그 방문자 수 통계 보기">
+                  <img
+                        src="https://hits.sh/gideokkim.github.io.svg?view=today-total&label=visits&color=00b4db&labelColor=4b4f52"
+                        alt="Blog visits"
+                        loading="lazy">
+            </a>
       </li>
   </ul>
 </nav>
